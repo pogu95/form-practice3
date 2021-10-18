@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+    h3.title Info
+    div.info-row.name-row
+        p.label Name:
+        p #{firstName} #{lastName}
+    div.info-contianer
+        div.info-row
+            p.label DOB:
+            p #{dateOfBirth.getMonth()+1}/#{dateOfBirth.getDate()}/#{dateOfBirth.getFullYear()}
+        div.info-row
+            p.label Description:
+            p #{description}
+    div.info-container
+        div.info-row
+            p.label Agree:
+            p #{agree}
+    div.info-container
+        div.info-row
+            p.label Ice Cream Choices:
+            p #{icecream}
+            p #{iceCreamOther}

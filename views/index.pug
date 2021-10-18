@@ -1,5 +1,36 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 My Form
+  form(action="/results" method="post")
+    label(for="firstName") First Name
+    input(type="text" name="firstName" id="firstName" value="firstName")
+    br
+    label(for="lastName") Last Name
+    input(type="text" name="lastName" id="lastName" value="lastName")
+    br
+    label(for="dateOfBirth") Date of Birth
+    input(type="date" name="dateOfBirth" id="dateOfbirth" value="dateOfBirth")
+    br
+
+    br
+    label(for="description") Description:
+    br
+    textarea(id = "description" name = "description" cols=40 rows=5)
+    br
+    label(for="agree") Agree?
+    input(type="checkbox" name="agree" id="agree" value="agree")
+    br
+    input(type="radio" name="icecream" id="chocolate" value="chocolate")
+    label(for="chocolate") Chocolate
+
+    input(type="radio" name="icecream" id="strawberry" value="strawberry" checked)
+    label(for="strawberry") Strawberry
+
+    input(type="radio" name="icecream" id="vanilla" value="vanilla")
+    label(for="vanilla") Vanilla
+
+    input(type="radio" name="iceCreamOther" id="other" value="nonoeOfThose")
+    label(for="other") Other
+    br
+    button(type="submit") Submit This
